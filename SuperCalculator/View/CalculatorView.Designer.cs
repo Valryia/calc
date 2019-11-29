@@ -63,34 +63,34 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(933, 838);
+            this.tabControl1.Size = new System.Drawing.Size(1069, 851);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dataTextBox);
             this.tabPage1.Controls.Add(this.enterButton);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(925, 810);
+            this.tabPage1.Size = new System.Drawing.Size(1058, 847);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dataTextBox
             // 
-            this.dataTextBox.Location = new System.Drawing.Point(264, 65);
+            this.dataTextBox.Location = new System.Drawing.Point(302, 69);
             this.dataTextBox.Name = "dataTextBox";
-            this.dataTextBox.Size = new System.Drawing.Size(306, 187);
+            this.dataTextBox.Size = new System.Drawing.Size(349, 199);
             this.dataTextBox.TabIndex = 1;
             this.dataTextBox.Text = "";
             // 
             // enterButton
             // 
-            this.enterButton.Location = new System.Drawing.Point(355, 351);
+            this.enterButton.Location = new System.Drawing.Point(406, 374);
             this.enterButton.Name = "enterButton";
-            this.enterButton.Size = new System.Drawing.Size(82, 27);
+            this.enterButton.Size = new System.Drawing.Size(94, 29);
             this.enterButton.TabIndex = 0;
             this.enterButton.Text = "button1";
             this.enterButton.UseVisualStyleBackColor = true;
@@ -114,19 +114,19 @@
             this.tabPage2.Controls.Add(this.input);
             this.tabPage2.Controls.Add(this.temporaryData);
             this.tabPage2.Controls.Add(this.data);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(925, 810);
+            this.tabPage2.Size = new System.Drawing.Size(1061, 822);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // redo
             // 
-            this.redo.Location = new System.Drawing.Point(817, 756);
+            this.redo.Location = new System.Drawing.Point(934, 806);
             this.redo.Name = "redo";
-            this.redo.Size = new System.Drawing.Size(80, 23);
+            this.redo.Size = new System.Drawing.Size(91, 25);
             this.redo.TabIndex = 15;
             this.redo.Text = "Применить";
             this.redo.UseVisualStyleBackColor = true;
@@ -134,9 +134,9 @@
             // 
             // undoButton
             // 
-            this.undoButton.Location = new System.Drawing.Point(817, 726);
+            this.undoButton.Location = new System.Drawing.Point(934, 774);
             this.undoButton.Name = "undoButton";
-            this.undoButton.Size = new System.Drawing.Size(80, 24);
+            this.undoButton.Size = new System.Drawing.Size(91, 26);
             this.undoButton.TabIndex = 14;
             this.undoButton.Text = "Отменить";
             this.undoButton.UseVisualStyleBackColor = true;
@@ -144,57 +144,57 @@
             // 
             // currentTextBox
             // 
-            this.currentTextBox.Location = new System.Drawing.Point(797, 787);
+            this.currentTextBox.Location = new System.Drawing.Point(911, 839);
             this.currentTextBox.Name = "currentTextBox";
-            this.currentTextBox.Size = new System.Drawing.Size(100, 23);
+            this.currentTextBox.Size = new System.Drawing.Size(114, 25);
             this.currentTextBox.TabIndex = 13;
             // 
             // allTextBox
             // 
-            this.allTextBox.Location = new System.Drawing.Point(636, 787);
+            this.allTextBox.Location = new System.Drawing.Point(727, 839);
             this.allTextBox.Name = "allTextBox";
-            this.allTextBox.Size = new System.Drawing.Size(100, 23);
+            this.allTextBox.Size = new System.Drawing.Size(114, 25);
             this.allTextBox.TabIndex = 12;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(742, 787);
+            this.label5.Location = new System.Drawing.Point(848, 839);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 18);
+            this.label5.Size = new System.Drawing.Size(56, 19);
             this.label5.TabIndex = 11;
             this.label5.Text = "Current";
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(607, 787);
+            this.label4.Location = new System.Drawing.Point(694, 839);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 22);
+            this.label4.Size = new System.Drawing.Size(26, 23);
             this.label4.TabIndex = 10;
             this.label4.Text = "All";
             // 
             // devide
             // 
-            this.devide.Location = new System.Drawing.Point(8, 282);
+            this.devide.Location = new System.Drawing.Point(9, 301);
             this.devide.Name = "devide";
-            this.devide.Size = new System.Drawing.Size(71, 21);
+            this.devide.Size = new System.Drawing.Size(81, 22);
             this.devide.TabIndex = 9;
             this.devide.Text = "/";
             this.devide.UseVisualStyleBackColor = true;
             // 
             // multiply
             // 
-            this.multiply.Location = new System.Drawing.Point(10, 254);
+            this.multiply.Location = new System.Drawing.Point(11, 271);
             this.multiply.Name = "multiply";
-            this.multiply.Size = new System.Drawing.Size(72, 21);
+            this.multiply.Size = new System.Drawing.Size(82, 22);
             this.multiply.TabIndex = 8;
             this.multiply.Text = "*";
             this.multiply.UseVisualStyleBackColor = true;
             // 
             // minus
             // 
-            this.minus.Location = new System.Drawing.Point(8, 225);
+            this.minus.Location = new System.Drawing.Point(9, 240);
             this.minus.Name = "minus";
-            this.minus.Size = new System.Drawing.Size(75, 23);
+            this.minus.Size = new System.Drawing.Size(86, 25);
             this.minus.TabIndex = 7;
             this.minus.Text = "-";
             this.minus.UseVisualStyleBackColor = true;
@@ -202,9 +202,9 @@
             // 
             // plus
             // 
-            this.plus.Location = new System.Drawing.Point(8, 196);
+            this.plus.Location = new System.Drawing.Point(9, 209);
             this.plus.Name = "plus";
-            this.plus.Size = new System.Drawing.Size(77, 23);
+            this.plus.Size = new System.Drawing.Size(88, 25);
             this.plus.TabIndex = 6;
             this.plus.Text = "+";
             this.plus.UseVisualStyleBackColor = true;
@@ -212,57 +212,57 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(112, 144);
+            this.label3.Location = new System.Drawing.Point(128, 154);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 20);
+            this.label3.Size = new System.Drawing.Size(47, 21);
             this.label3.TabIndex = 5;
             this.label3.Text = "Ввод";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(38, 119);
+            this.label2.Location = new System.Drawing.Point(43, 127);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 22);
+            this.label2.Size = new System.Drawing.Size(131, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "Временные данные";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(94, 45);
+            this.label1.Location = new System.Drawing.Point(107, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 18);
+            this.label1.Size = new System.Drawing.Size(67, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "Данные";
             // 
             // input
             // 
-            this.input.Location = new System.Drawing.Point(159, 144);
+            this.input.Location = new System.Drawing.Point(182, 154);
             this.input.Name = "input";
-            this.input.Size = new System.Drawing.Size(766, 22);
+            this.input.Size = new System.Drawing.Size(875, 23);
             this.input.TabIndex = 2;
             this.input.Text = "";
             // 
             // temporaryData
             // 
-            this.temporaryData.Location = new System.Drawing.Point(159, 117);
+            this.temporaryData.Location = new System.Drawing.Point(182, 125);
             this.temporaryData.Name = "temporaryData";
-            this.temporaryData.Size = new System.Drawing.Size(766, 22);
+            this.temporaryData.Size = new System.Drawing.Size(875, 23);
             this.temporaryData.TabIndex = 1;
             this.temporaryData.Text = "";
             // 
             // data
             // 
-            this.data.Location = new System.Drawing.Point(159, 0);
+            this.data.Location = new System.Drawing.Point(182, 0);
             this.data.Name = "data";
-            this.data.Size = new System.Drawing.Size(765, 110);
+            this.data.Size = new System.Drawing.Size(874, 117);
             this.data.TabIndex = 0;
             this.data.Text = "";
             // 
             // CalculatorView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 838);
+            this.ClientSize = new System.Drawing.Size(1069, 851);
             this.Controls.Add(this.tabControl1);
             this.Name = "CalculatorView";
             this.Text = "Form1";
@@ -270,6 +270,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         #endregion

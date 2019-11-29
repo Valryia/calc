@@ -16,7 +16,7 @@ namespace SuperCalculator.Presenter
             this.calculatorService = calculatorService;
 
             calculatorView.SetData += SetNumbers;
-            calculatorView.OperationExecuteEvent += ExecuteOperationExecute;
+            calculatorView.OperationExecuteEvent += ExecuteOperationExecute; // подписываем функцию ExecuteOperationExecute на событие выполнения операции
             calculatorView.OperationRedoEvent += Redo;
             calculatorView.OperationUndoEvent += Undo;
         }
@@ -47,11 +47,11 @@ namespace SuperCalculator.Presenter
 
         private void ExecuteOperationExecute(Operation operation)
         {
-            List<BigInteger> numbers = calculatorService.Execute(operation);
+            List<BigInteger> numbers = calculatorService.Execute(operation); // вызов функции выполнить операцию в сервисе
             calculatorService.SetData(numbers);
-            calculatorView.UpdateNumbers(numbers);
-            calculatorView.updateAllOperations(calculatorService.GetAllOperationsCount());
-            calculatorView.updateCurrentOperation(calculatorService.GetCurrentOperation());
+            calculatorView.UpdateNumbers(numbers); // обновление данных
+            calculatorView.updateAllOperations(calculatorService.GetAllOperationsCount());// обновление кол-ва операций
+            calculatorView.updateCurrentOperation(calculatorService.GetCurrentOperation());// обновление кол-ва операций
         }
     }
 }

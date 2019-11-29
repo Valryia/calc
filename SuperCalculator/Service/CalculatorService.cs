@@ -8,8 +8,8 @@ namespace SuperCalculator.Service
     {
         List<BigInteger> numbers = new List<BigInteger>();
 
-        private Stack<Operation> executedOperations = new Stack<Operation>();
-        private Stack<Operation> expectedOperations = new Stack<Operation>();
+        private Stack<Operation> executedOperations = new Stack<Operation>(); // выполненные операции
+        private Stack<Operation> expectedOperations = new Stack<Operation>(); // невыполненные операции
 
         public void SetData(List<BigInteger> bigIntegers)
         {
@@ -18,8 +18,8 @@ namespace SuperCalculator.Service
 
         public List<BigInteger> Execute(Operation operation)
         {
-            executedOperations.Push(operation);
-            return operation.execute(numbers);
+            executedOperations.Push(operation); // ложим операцию в выполненные
+            return operation.execute(numbers); // выполняем операцию
         }
 
         public BigInteger GetAllOperationsCount()
