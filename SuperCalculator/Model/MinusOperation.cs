@@ -10,14 +10,22 @@ namespace SuperCalculator.Model
         {
         }
 
-        public override List<BigInteger> execute(List<BigInteger> numbers)
+        public override List<BigInteger> execute(ref List<BigInteger> numbers)
         {
-            return numbers.Select(number => number - this.number).ToList();
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                numbers[i] -= number;
+            }
+            return numbers;
         }
 
-        public override List<BigInteger> undo(List<BigInteger> numbers)
+        public override List<BigInteger> undo(ref List<BigInteger> numbers)
         {
-            return numbers.Select(number => number + this.number).ToList();
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                numbers[i] += number;
+            }
+            return numbers;
         }
     }
 }

@@ -30,11 +30,15 @@ namespace SuperCalculator
         public delegate void OperationUndoDelegate();
 
         public event OperationUndoDelegate OperationUndoEvent;
-        
+
         public delegate void OperationRedoDelegate();
 
         public event OperationRedoDelegate OperationRedoEvent;
-        
+
+        public delegate void AggregateOperationExecuteDelegate(Operation aggregateOperation);
+
+        public event AggregateOperationExecuteDelegate AggregateOperationExecuteEvent;
+
         private void enterButton_Click(object sender, EventArgs e)
         {
             string[] strings = dataTextBox.Text.Split(' ');
@@ -43,6 +47,11 @@ namespace SuperCalculator
         }
 
         public void UpdateNumbers(List<BigInteger> numbers)
+        {
+            data.Text = string.Join(" ", numbers);
+        }
+
+        public void UpdateTemporaryOutput(List<BigInteger> numbers)
         {
             data.Text = string.Join(" ", numbers);
         }
@@ -75,6 +84,20 @@ namespace SuperCalculator
         private void minus_Click(object sender, EventArgs e)
         {
             OperationExecuteEvent?.Invoke(new MinusOperation(BigInteger.Parse(input.Text)));
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void medianButton_Click(object sender, EventArgs e)
+        {
+            AggregateOperationExecuteEvent?.Invoke(new MedianOperation());
+        }
+
+        private void deviationButton_Click(object sender, EventArgs e)
+        {
+            AggregateOperationExecuteEvent?.Invoke(new StandardDeviationOperation());
         }
     }
 }

@@ -12,7 +12,11 @@ namespace SuperCalculator.Model
             this.number = number;
         }
 
-        public abstract List<BigInteger> execute(List<BigInteger> numbers);
-        public abstract List<BigInteger> undo(List<BigInteger> numbers);
+        protected Operation()
+        {
+        }
+
+        public abstract List<BigInteger> execute(ref List<BigInteger> numbers);
+        public abstract List<BigInteger> undo(ref List<BigInteger> numbers);
     }
 }

@@ -13,13 +13,15 @@ namespace SuperCalculator.Service
 
         public void SetData(List<BigInteger> bigIntegers)
         {
-            numbers = bigIntegers;
+            numbers = new List<BigInteger>(bigIntegers);
+            executedOperations.Clear();
+            expectedOperations.Clear();
         }
 
         public List<BigInteger> Execute(Operation operation)
         {
             executedOperations.Push(operation);
-            return operation.execute(numbers);
+            return operation.execute(ref numbers);
         }
 
         public BigInteger GetAllOperationsCount()
@@ -36,14 +38,14 @@ namespace SuperCalculator.Service
         {
             Operation operation = executedOperations.Pop();
             expectedOperations.Push(operation);
-            return operation.undo(numbers);
+            return operation.undo(ref numbers);
         }
 
         public List<BigInteger> Redo()
         {
             Operation operation = expectedOperations.Pop();
             executedOperations.Push(operation);
-            return operation.execute(numbers);
+            return operation.execute(ref numbers);
         }
     }
 }

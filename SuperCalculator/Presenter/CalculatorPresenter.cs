@@ -19,12 +19,20 @@ namespace SuperCalculator.Presenter
             calculatorView.OperationExecuteEvent += ExecuteOperationExecute;
             calculatorView.OperationRedoEvent += Redo;
             calculatorView.OperationUndoEvent += Undo;
+            calculatorView.AggregateOperationExecuteEvent += ExecuteAggregateOperationExecute;
+        }
+        
+        private void ExecuteAggregateOperationExecute(Operation operation)
+        {
+            List<BigInteger> numbers = calculatorService.Execute(operation);
+            calculatorView.UpdateTemporaryOutput(numbers);
+            calculatorView.updateAllOperations(calculatorService.GetAllOperationsCount());
+            calculatorView.updateCurrentOperation(calculatorService.GetCurrentOperation());
         }
 
         private void Undo()
         {
             List<BigInteger> numbers = calculatorService.Undo();
-            calculatorService.SetData(numbers);
             calculatorView.UpdateNumbers(numbers);
             calculatorView.updateAllOperations(calculatorService.GetAllOperationsCount());
             calculatorView.updateCurrentOperation(calculatorService.GetCurrentOperation());
@@ -33,7 +41,6 @@ namespace SuperCalculator.Presenter
         private void Redo()
         {
             List<BigInteger> numbers = calculatorService.Redo();
-            calculatorService.SetData(numbers);
             calculatorView.UpdateNumbers(numbers);
             calculatorView.updateAllOperations(calculatorService.GetAllOperationsCount());
             calculatorView.updateCurrentOperation(calculatorService.GetCurrentOperation());
@@ -48,7 +55,6 @@ namespace SuperCalculator.Presenter
         private void ExecuteOperationExecute(Operation operation)
         {
             List<BigInteger> numbers = calculatorService.Execute(operation);
-            calculatorService.SetData(numbers);
             calculatorView.UpdateNumbers(numbers);
             calculatorView.updateAllOperations(calculatorService.GetAllOperationsCount());
             calculatorView.updateCurrentOperation(calculatorService.GetCurrentOperation());
