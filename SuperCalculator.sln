@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperCalculator", "SuperCalculator\SuperCalculator.csproj", "{CC803E8F-7179-4700-9708-D3A2CD8D1209}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC803E8F-7179-4700-9708-D3A2CD8D1209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC803E8F-7179-4700-9708-D3A2CD8D1209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC803E8F-7179-4700-9708-D3A2CD8D1209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC803E8F-7179-4700-9708-D3A2CD8D1209}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
