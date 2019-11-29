@@ -58,7 +58,7 @@ namespace SuperCalculator
 
         private void plus_Click(object sender, EventArgs e)
         {
-            OperationExecuteEvent?.Invoke(new SumOperation(BigInteger.Parse(input.Text)));
+            OperationExecuteEvent?.Invoke(new SumOperation(BigInteger.Parse(input.Text))); // вызов события выполнения операции в которое мы передаём оперцию суммы
         }
 
         private void undoButton_Click(object sender, EventArgs e)
