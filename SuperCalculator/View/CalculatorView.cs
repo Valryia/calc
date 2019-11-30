@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -98,6 +99,27 @@ namespace SuperCalculator
         private void deviationButton_Click(object sender, EventArgs e)
         {
             AggregateOperationExecuteEvent?.Invoke(new StandardDeviationOperation());
+        }
+
+        private void inputFileButton_Click(object sender, EventArgs e)
+        {
+            StreamReader sr = new StreamReader(Application.StartupPath + "\\input.txt");
+            List<BigInteger> bigIntegers = new List<BigInteger>();
+            string line;
+            while ((line = sr.ReadLine()) != null)
+            {
+                bigIntegers.Add(BigInteger.Parse(line));
+            }
+            SetData?.Invoke(bigIntegers);
+        }
+
+        private void outputFileButton_Click(object sender, EventArgs e)
+        {
+            StreamWriter sw = new StreamWriter(Application.StartupPath + "\\output.txt");
+            string[] strings = data.Text.Split(' ');
+            List<BigInteger> bigIntegers = strings.Select(numberString => BigInteger.Parse(numberString)).ToList();
+            bigIntegers.ForEach(number => sw.WriteLine(number));
+            sw.Close();
         }
     }
 }

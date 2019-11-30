@@ -32,6 +32,8 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.outputFileButton = new System.Windows.Forms.Button();
+            this.inputFileButton = new System.Windows.Forms.Button();
             this.dataTextBox = new System.Windows.Forms.RichTextBox();
             this.enterButton = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -57,6 +59,9 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.errorProvider1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tabControl1
+            // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -65,6 +70,11 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(933, 838);
             this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.outputFileButton);
+            this.tabPage1.Controls.Add(this.inputFileButton);
             this.tabPage1.Controls.Add(this.dataTextBox);
             this.tabPage1.Controls.Add(this.enterButton);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
@@ -74,11 +84,38 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ввод";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // outputFileButton
+            // 
+            this.outputFileButton.Location = new System.Drawing.Point(364, 333);
+            this.outputFileButton.Name = "outputFileButton";
+            this.outputFileButton.Size = new System.Drawing.Size(110, 23);
+            this.outputFileButton.TabIndex = 3;
+            this.outputFileButton.Text = "вывести в файл";
+            this.outputFileButton.UseVisualStyleBackColor = true;
+            this.outputFileButton.Click += new System.EventHandler(this.outputFileButton_Click);
+            // 
+            // inputFileButton
+            // 
+            this.inputFileButton.Location = new System.Drawing.Point(364, 305);
+            this.inputFileButton.Name = "inputFileButton";
+            this.inputFileButton.Size = new System.Drawing.Size(110, 23);
+            this.inputFileButton.TabIndex = 2;
+            this.inputFileButton.Text = "ввести из файла";
+            this.inputFileButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.inputFileButton.UseVisualStyleBackColor = true;
+            this.inputFileButton.Click += new System.EventHandler(this.inputFileButton_Click);
+            // 
+            // dataTextBox
+            // 
             this.dataTextBox.Location = new System.Drawing.Point(264, 65);
             this.dataTextBox.Name = "dataTextBox";
             this.dataTextBox.Size = new System.Drawing.Size(306, 187);
             this.dataTextBox.TabIndex = 1;
             this.dataTextBox.Text = "";
+            // 
+            // enterButton
+            // 
             this.enterButton.Location = new System.Drawing.Point(376, 272);
             this.enterButton.Name = "enterButton";
             this.enterButton.Size = new System.Drawing.Size(82, 27);
@@ -86,6 +123,9 @@
             this.enterButton.Text = "ввести";
             this.enterButton.UseVisualStyleBackColor = true;
             this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
+            // 
+            // tabPage2
+            // 
             this.tabPage2.Controls.Add(this.deviationButton);
             this.tabPage2.Controls.Add(this.medianButton);
             this.tabPage2.Controls.Add(this.redo);
@@ -102,14 +142,17 @@
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.input);
             this.tabPage2.Controls.Add(this.data);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(925, 810);
+            this.tabPage2.Size = new System.Drawing.Size(925, 812);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Калькулятор";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // deviationButton
+            // 
             this.deviationButton.Location = new System.Drawing.Point(98, 182);
             this.deviationButton.Name = "deviationButton";
             this.deviationButton.Size = new System.Drawing.Size(87, 23);
@@ -117,6 +160,9 @@
             this.deviationButton.Text = "Отклонение";
             this.deviationButton.UseVisualStyleBackColor = true;
             this.deviationButton.Click += new System.EventHandler(this.deviationButton_Click);
+            // 
+            // medianButton
+            // 
             this.medianButton.Location = new System.Drawing.Point(103, 153);
             this.medianButton.Name = "medianButton";
             this.medianButton.Size = new System.Drawing.Size(75, 23);
@@ -124,6 +170,9 @@
             this.medianButton.Text = "Медиана";
             this.medianButton.UseVisualStyleBackColor = true;
             this.medianButton.Click += new System.EventHandler(this.medianButton_Click);
+            // 
+            // redo
+            // 
             this.redo.Location = new System.Drawing.Point(817, 756);
             this.redo.Name = "redo";
             this.redo.Size = new System.Drawing.Size(80, 23);
@@ -131,6 +180,9 @@
             this.redo.Text = "Применить";
             this.redo.UseVisualStyleBackColor = true;
             this.redo.Click += new System.EventHandler(this.redo_Click);
+            // 
+            // undoButton
+            // 
             this.undoButton.Location = new System.Drawing.Point(817, 726);
             this.undoButton.Name = "undoButton";
             this.undoButton.Size = new System.Drawing.Size(80, 24);
@@ -138,36 +190,57 @@
             this.undoButton.Text = "Отменить";
             this.undoButton.UseVisualStyleBackColor = true;
             this.undoButton.Click += new System.EventHandler(this.undoButton_Click);
+            // 
+            // currentTextBox
+            // 
             this.currentTextBox.Location = new System.Drawing.Point(797, 787);
             this.currentTextBox.Name = "currentTextBox";
             this.currentTextBox.Size = new System.Drawing.Size(100, 23);
             this.currentTextBox.TabIndex = 13;
+            // 
+            // allTextBox
+            // 
             this.allTextBox.Location = new System.Drawing.Point(636, 787);
             this.allTextBox.Name = "allTextBox";
             this.allTextBox.Size = new System.Drawing.Size(100, 23);
             this.allTextBox.TabIndex = 12;
+            // 
+            // label5
+            // 
             this.label5.Location = new System.Drawing.Point(742, 787);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 18);
             this.label5.TabIndex = 11;
             this.label5.Text = "Current";
+            // 
+            // label4
+            // 
             this.label4.Location = new System.Drawing.Point(607, 787);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(23, 22);
             this.label4.TabIndex = 10;
             this.label4.Text = "All";
+            // 
+            // devide
+            // 
             this.devide.Location = new System.Drawing.Point(17, 239);
             this.devide.Name = "devide";
             this.devide.Size = new System.Drawing.Size(71, 21);
             this.devide.TabIndex = 9;
             this.devide.Text = "/";
             this.devide.UseVisualStyleBackColor = true;
+            // 
+            // multiply
+            // 
             this.multiply.Location = new System.Drawing.Point(19, 211);
             this.multiply.Name = "multiply";
             this.multiply.Size = new System.Drawing.Size(72, 21);
             this.multiply.TabIndex = 8;
             this.multiply.Text = "*";
             this.multiply.UseVisualStyleBackColor = true;
+            // 
+            // minus
+            // 
             this.minus.Location = new System.Drawing.Point(17, 182);
             this.minus.Name = "minus";
             this.minus.Size = new System.Drawing.Size(75, 23);
@@ -175,6 +248,9 @@
             this.minus.Text = "-";
             this.minus.UseVisualStyleBackColor = true;
             this.minus.Click += new System.EventHandler(this.minus_Click);
+            // 
+            // plus
+            // 
             this.plus.Location = new System.Drawing.Point(17, 153);
             this.plus.Name = "plus";
             this.plus.Size = new System.Drawing.Size(77, 23);
@@ -182,27 +258,45 @@
             this.plus.Text = "+";
             this.plus.UseVisualStyleBackColor = true;
             this.plus.Click += new System.EventHandler(this.plus_Click);
+            // 
+            // label3
+            // 
             this.label3.Location = new System.Drawing.Point(108, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Ввод";
+            // 
+            // label1
+            // 
             this.label1.Location = new System.Drawing.Point(94, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 18);
             this.label1.TabIndex = 3;
             this.label1.Text = "Данные";
+            // 
+            // input
+            // 
             this.input.Location = new System.Drawing.Point(156, 117);
             this.input.Name = "input";
             this.input.Size = new System.Drawing.Size(766, 22);
             this.input.TabIndex = 2;
             this.input.Text = "";
+            // 
+            // data
+            // 
             this.data.Location = new System.Drawing.Point(159, 0);
             this.data.Name = "data";
             this.data.Size = new System.Drawing.Size(765, 110);
             this.data.TabIndex = 0;
             this.data.Text = "";
+            // 
+            // errorProvider1
+            // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // CalculatorView
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 838);
@@ -240,5 +334,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button medianButton;
         private System.Windows.Forms.Button deviationButton;
+        private System.Windows.Forms.Button inputFileButton;
+        private System.Windows.Forms.Button outputFileButton;
     }
 }
