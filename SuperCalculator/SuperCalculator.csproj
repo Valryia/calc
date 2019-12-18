@@ -51,9 +51,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\DevideOperation.cs" />
+    <Compile Include="Model\FactorialOperation.cs" />
+    <Compile Include="Model\LogOperation.cs" />
     <Compile Include="Model\MedianOperation.cs" />
     <Compile Include="Model\MinusOperation.cs" />
+    <Compile Include="Model\MultiplyOperation.cs" />
     <Compile Include="Model\Operation.cs" />
+    <Compile Include="Model\PowOperation.cs" />
+    <Compile Include="Model\RootOperation.cs" />
+    <Compile Include="Model\SqrtOperation.cs" />
+    <Compile Include="Model\SquareOperation.cs" />
     <Compile Include="Model\StandardDeviationOperation.cs" />
     <Compile Include="Model\SumOperation.cs" />
     <Compile Include="Presenter\CalculatorPresenter.cs" />

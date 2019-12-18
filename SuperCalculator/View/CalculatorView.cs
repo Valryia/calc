@@ -121,5 +121,45 @@ namespace SuperCalculator
             bigIntegers.ForEach(number => sw.WriteLine(number));
             sw.Close();
         }
+
+        private void multiply_Click(object sender, EventArgs e)
+        {
+            OperationExecuteEvent?.Invoke(new MultiplyOperation(BigInteger.Parse(input.Text)));
+        }
+
+        private void devide_Click(object sender, EventArgs e)
+        {
+            OperationExecuteEvent?.Invoke(new DevideOperation(BigInteger.Parse(input.Text)));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OperationExecuteEvent?.Invoke(new PowOperation(BigInteger.Parse(input.Text)));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OperationExecuteEvent?.Invoke(new SquareOperation(BigInteger.Parse(input.Text)));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OperationExecuteEvent?.Invoke(new SqrtOperation(BigInteger.Parse(input.Text)));
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OperationExecuteEvent?.Invoke(new RootOperation(BigInteger.Parse(input.Text)));
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OperationExecuteEvent?.Invoke(new LogOperation(BigInteger.Parse(input.Text)));
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            OperationExecuteEvent?.Invoke(new FactorialOperation(BigInteger.Parse(input.Text)));
+        }
     }
 }
